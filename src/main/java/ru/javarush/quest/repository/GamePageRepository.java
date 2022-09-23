@@ -2,11 +2,15 @@ package ru.javarush.quest.repository;
 
 import ru.javarush.quest.entities.GamePage;
 import ru.javarush.quest.entities.GamePageCard;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class GamePageRepository {
     private static final GamePageRepository pageRepository = new GamePageRepository();
+    private static List<Integer> statistics = new ArrayList<>();
 
     public static GamePageRepository getPageRepository() {
         return pageRepository;
@@ -90,6 +94,25 @@ public class GamePageRepository {
                             }
                     )
             );
+            put(5, new GamePage(
+                            "Крот",
+                            "Барыги предложили вам немалые деньги в обмен на информацию об облавах на их лаборатории." +
+                                    " Согласитесь?",
+
+                            new GamePageCard[]{
+                                    new GamePageCard(
+                                            "Пенсия обеспечена.",
+                                            "Все равно вех не пересажаем.",
+                                            "Соглашаетесь и открываете счет в банке потирая руки.",
+                                            false),
+                                    new GamePageCard(
+                                            "Это верх наглости.",
+                                            "Предложить агенту УБН такое?",
+                                            "Достаете пистолет и растреиваете парламентеров.",
+                                            true)
+                            }
+                    )
+            );
         }
     };
 
@@ -105,7 +128,13 @@ public class GamePageRepository {
 
     public int getNextIndex(int currentIndex, GamePageCard card) {
         return card.result ? currentIndex + 1 : 0;
+    }
 
+    public List<Integer> getStatistics(){
+        return statistics;
+    }
+
+    public int getStorageSize() {
+        return storage.size();
     }
 }
-

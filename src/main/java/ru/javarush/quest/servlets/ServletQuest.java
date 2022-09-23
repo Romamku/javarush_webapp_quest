@@ -25,7 +25,12 @@ public class ServletQuest extends HttpServlet {
         req.setAttribute("pageRepository", pageRepository);
 
         int index = getQuestionId(req);
+        pageRepository.getStatistics().add(index);
         req.setAttribute("index", index);
+        if (pageRepository.getStorageSize() < index) {
+            resp.sendRedirect("luckyendgame");
+            return;
+        }
         if (index == 0){
             resp.sendRedirect("endgame");
             return;
