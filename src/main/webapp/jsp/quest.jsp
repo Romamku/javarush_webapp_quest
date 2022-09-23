@@ -14,21 +14,14 @@
     </style>
 </head>
 <body class="w3-light-grey">
-
-
 <div class="w3-content" style="max-width:1400px">
-
-    <!-- Header -->
     <header class="w3-container w3-center w3-padding-32">
         <h1><b>${pageRepository.getGamePage(index).getTitle()}</b></h1>
         <p>${pageRepository.getGamePage(index).getQuestion()}</p>
     </header>
-
     <div class="w3-row">
         <c:forEach items="${pageRepository.getGamePage(index).getCards()}" var="card">
-
             <div class="w3-col l6">
-
                 <div class="w3-card-4 w3-margin w3-white">
                     <img src="images/IMGG.png" style="width:100%">
                     <div class="w3-container">
@@ -53,13 +46,10 @@
 
         </c:forEach>
     </div>
-
     <div class="w3-container w3-center">
         <button class="w3-btn w3-round-large" style="width:40%"
                 onclick="location.href='${pageContext.request.contextPath}'"><b>На главную</b></button>
     </div>
 </div>
-
 </body>
 </html>
-

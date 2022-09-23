@@ -12,28 +12,21 @@
         }
     </style>
 </head>
-
 <body class="w3-light-grey">
-
 <div class="w3-content" style="max-width:1400px">
-
-
     <header class="w3-container w3-center w3-padding-32">
         <h1><b>ПРОЛОГ</b></h1>
         <p>Добро пожаловать в Колумбию</p>
     </header>
-
     <div class="w3-row">
 
         <div class="w3-col l7">
             <div class="w3-card-4 w3-margin w3-white">
                 <img src="images/Coc.jpg" style="width:100%">
-
                 <div class="w3-container">
                     <h3><b>МАЙАМИ</b></h3>
                     <h5>Наркоэпидемия в разгаре, <span class="w3-opacity">Август 18, 1981</span></h5>
                 </div>
-
                 <div class="w3-container">
                     <p>С начала 1970-х, когда правительство США объявило войну наркотикам, США и европейские страны
                         оказывают финансовую, материально-техническую, тактическую и военную помощь правительству
@@ -41,14 +34,12 @@
                 </div>
             </div>
             <hr>
-
             <div class="w3-card-4 w3-margin w3-white">
                 <img src="images/Kartel.jpg" style="width:100%">
                 <div class="w3-container">
                     <h3><b>МЕДЕЛЬИН</b></h3>
                     <h5>Медельинский картель, <span class="w3-opacity">Апрель 2, 1982</span></h5>
                 </div>
-
                 <div class="w3-container">
                     <p>Медельинский картель - самая мощная кокаиновая империя в мире. Доход от основной деятельности
                         составляет больше чем 60 миллионов долларов в день. На тотальную войну, начатую правительством
@@ -60,10 +51,8 @@
                 </div>
             </div>
         </div>
-
         <div class="w3-col l4">
             <div class="w3-card-4 w3-margin w3-white">
-
                 <img src="images/Merphy.jpg" style="width:100%">
                 <div class="w3-container w3-white">
                     <h4><b>Собственно о вас</b></h4>
@@ -73,7 +62,6 @@
                 </div>
             </div>
             <hr>
-
             <div class="w3-card w3-margin">
                 <div class="w3-container w3-padding">
                     <h4>Полезные ссылки</h4>
@@ -106,7 +94,6 @@
                 </ul>
             </div>
             <hr>
-
             <div class="w3-card w3-margin">
                 <div class="w3-container w3-padding">
                     <h4>Навигация</h4>
