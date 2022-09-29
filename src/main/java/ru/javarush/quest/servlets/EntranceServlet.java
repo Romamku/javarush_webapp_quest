@@ -1,5 +1,7 @@
 package ru.javarush.quest.servlets;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.javarush.quest.entities.Model;
 import ru.javarush.quest.entities.User;
 import javax.servlet.ServletConfig;
@@ -13,10 +15,12 @@ import java.io.IOException;
 
 @WebServlet(name = "EntranceServlet", value = "/entrance")
 public class EntranceServlet extends HttpServlet {
+    private static final Logger log = LoggerFactory.getLogger(IndexServlet.class);
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
+        log.trace("Инициализация EntranceServlet.");
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {

@@ -13,7 +13,7 @@ import java.io.IOException;
 
 @WebServlet(name = "IndexServlet", value = "")
 public class IndexServlet extends HttpServlet {
-public static final Logger log = LoggerFactory.getLogger(IndexServlet.class);
+private static final Logger log = LoggerFactory.getLogger(IndexServlet.class);
 
     @Override
     public void init(ServletConfig config) throws ServletException {
@@ -24,6 +24,6 @@ public static final Logger log = LoggerFactory.getLogger(IndexServlet.class);
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/index.jsp");
         dispatcher.forward(req, resp);
-        log.trace("Напрявляемся" + resp.getHeaderNames());
+        log.trace("doGet (IndexServlet) -> отработал");
     }
 }

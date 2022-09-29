@@ -1,5 +1,7 @@
 package ru.javarush.quest.servlets;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.javarush.quest.entities.Model;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -13,10 +15,11 @@ import java.util.List;
 
 @WebServlet(name = "UserListServlet", value = "/userList")
 public class UserListServlet extends HttpServlet {
+    private static final Logger log = LoggerFactory.getLogger(IndexServlet.class);
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-
+        log.trace("Инициализация UserListServlet.");
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -26,5 +29,6 @@ public class UserListServlet extends HttpServlet {
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/userList.jsp");
         dispatcher.forward(req, resp);
+        log.trace("doGet (UserListServlet) -> отработал");
     }
 }
